@@ -58,7 +58,7 @@ export default function App() {
                 </section>}
           </div>
         </div>
-        <RouteMap nodes={navigationNodes} edges={navigationEdges} route={routeResult} selectedFloor={selectedFloor} currentStep={currentStep} onFloorChange={setSelectedFloor} />
+        <RouteMap nodes={navigationNodes} edges={navigationEdges} route={routeResult} selectedFloor={selectedFloor} onFloorChange={setSelectedFloor} />
       </div>
       {routeResult && <InstructionList steps={steps} currentStep={currentStep} speechStatus={speechStatus} onStepSelect={selectStep} onPrevious={() => changeStep(currentStep - 1)} onNext={() => changeStep(currentStep + 1)} onRestart={() => changeStep(0)} onSpeakAll={() => speak(steps.map((step, index) => `${index + 1}단계. ${step.edge.instruction}`).join(' '))} onSpeakCurrent={() => speak(`${currentStep + 1}단계. ${steps[currentStep]?.edge.instruction ?? ''}`)} onStopSpeech={() => { stopSpeech(); setSpeechStatus('음성 안내를 중지했습니다.'); }} />}
     </main><footer>Accessible School Navigator <span>·</span> 학교 배리어프리 이동 지원 프로젝트</footer></>
