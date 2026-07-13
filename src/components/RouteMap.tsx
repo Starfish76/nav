@@ -36,42 +36,42 @@ interface RoomBox {
 }
 
 const floorOneBoxes: Record<string, { x: number; y: number; width: number; height: number; doorPath: string }> = {
-  'wee-class-1': { x: 26, y: 205, width: 64, height: 170, doorPath: 'M90 271v18' },
-  'health-1': { x: 26, y: 375, width: 64, height: 170, doorPath: 'M90 446v18' },
-  'lobby-1': { x: 90, y: 390, width: 50, height: 155, doorPath: '' },
-  'stairs-west-1': { x: 90, y: 205, width: 50, height: 95, doorPath: '' },
-  'male-wc-1': { x: 140, y: 205, width: 70, height: 95, doorPath: 'M166 300h18' },
-  'class-1-1': { x: 140, y: 390, width: 80, height: 110, doorPath: 'M171 390h18' },
-  'class-1-2': { x: 220, y: 390, width: 75, height: 110, doorPath: 'M248 390h18' },
-  'vice-principal-1': { x: 295, y: 390, width: 45, height: 110, doorPath: 'M309 390h18' },
-  'support-a-1': { x: 340, y: 390, width: 45, height: 110, doorPath: 'M353 390h18' },
-  'administration-1': { x: 385, y: 390, width: 70, height: 110, doorPath: 'M411 390h18' },
-  'grade1-office-1': { x: 335, y: 205, width: 70, height: 95, doorPath: 'M361 300h18' },
-  'print-room-1': { x: 405, y: 205, width: 45, height: 95, doorPath: 'M416 300h18' },
-  'warehouse-1': { x: 405, y: 160, width: 45, height: 45, doorPath: 'M416 205h18' },
-  'stairs-1': { x: 450, y: 205, width: 38, height: 95, doorPath: 'M460 300h18' },
-  'accessible-female-wc-1': { x: 488, y: 205, width: 42, height: 95, doorPath: 'M500 300h18' },
-  'accessible-wc-1': { x: 530, y: 205, width: 38, height: 95, doorPath: 'M540 300h18' },
-  'elevator-1': { x: 568, y: 205, width: 30, height: 95, doorPath: 'M574 300h18' },
-  'main-entrance-1': { x: 455, y: 390, width: 55, height: 170, doorPath: '' },
-  'class-1-3': { x: 510, y: 390, width: 90, height: 110, doorPath: 'M546 390h18' },
-  'class-1-4': { x: 600, y: 390, width: 70, height: 110, doorPath: 'M626 390h18' },
-  'class-1-5': { x: 670, y: 390, width: 75, height: 110, doorPath: 'M699 390h18' },
-  'class-1-6': { x: 745, y: 390, width: 75, height: 110, doorPath: 'M776 390h18' },
-  'facility-storage-1': { x: 650, y: 205, width: 70, height: 95, doorPath: 'M676 300h18' },
-  'female-wc-east-1': { x: 720, y: 205, width: 55, height: 95, doorPath: 'M738 300h18' },
-  'stairs-east-1': { x: 775, y: 205, width: 30, height: 95, doorPath: 'M781 300h18' },
-  'machine-room-1': { x: 805, y: 205, width: 45, height: 95, doorPath: 'M818 300h18' },
-  'east-lobby-1': { x: 820, y: 390, width: 55, height: 155, doorPath: '' },
-  'library-1': { x: 875, y: 205, width: 99, height: 340, doorPath: 'M916 300h18' },
+  'wee-class-1': { x: 26, y: 230, width: 64, height: 150, doorPath: '' },
+  'health-1': { x: 26, y: 380, width: 64, height: 150, doorPath: '' },
+  'lobby-1': { x: 90, y: 365, width: 50, height: 165, doorPath: '' },
+  'stairs-west-1': { x: 90, y: 230, width: 50, height: 80, doorPath: '' },
+  'male-wc-1': { x: 140, y: 230, width: 70, height: 80, doorPath: '' },
+  'class-1-1': { x: 140, y: 365, width: 80, height: 80, doorPath: '' },
+  'class-1-2': { x: 220, y: 365, width: 75, height: 80, doorPath: '' },
+  'vice-principal-1': { x: 295, y: 365, width: 45, height: 80, doorPath: '' },
+  'support-a-1': { x: 340, y: 365, width: 45, height: 80, doorPath: '' },
+  'administration-1': { x: 385, y: 365, width: 70, height: 80, doorPath: '' },
+  'grade1-office-1': { x: 335, y: 230, width: 70, height: 80, doorPath: '' },
+  'print-room-1': { x: 405, y: 230, width: 45, height: 80, doorPath: '' },
+  'warehouse-1': { x: 405, y: 180, width: 45, height: 50, doorPath: '' },
+  'stairs-1': { x: 450, y: 230, width: 38, height: 80, doorPath: '' },
+  'accessible-female-wc-1': { x: 488, y: 230, width: 42, height: 80, doorPath: '' },
+  'accessible-wc-1': { x: 530, y: 230, width: 38, height: 80, doorPath: '' },
+  'elevator-1': { x: 568, y: 230, width: 30, height: 80, doorPath: '' },
+  'main-entrance-1': { x: 455, y: 365, width: 55, height: 165, doorPath: '' },
+  'class-1-3': { x: 510, y: 365, width: 90, height: 80, doorPath: '' },
+  'class-1-4': { x: 600, y: 365, width: 70, height: 80, doorPath: '' },
+  'class-1-5': { x: 670, y: 365, width: 75, height: 80, doorPath: '' },
+  'class-1-6': { x: 745, y: 365, width: 75, height: 80, doorPath: '' },
+  'facility-storage-1': { x: 650, y: 230, width: 70, height: 80, doorPath: '' },
+  'female-wc-east-1': { x: 720, y: 230, width: 55, height: 80, doorPath: '' },
+  'stairs-east-1': { x: 775, y: 230, width: 30, height: 80, doorPath: '' },
+  'machine-room-1': { x: 805, y: 230, width: 45, height: 80, doorPath: '' },
+  'east-lobby-1': { x: 820, y: 365, width: 55, height: 165, doorPath: '' },
+  'library-1': { x: 875, y: 230, width: 99, height: 300, doorPath: '' },
 };
 
-const floorOneOutline = 'M26 205H90V205H210V300H335V205H405V160H450V205H598V300H650V205H850V300H875V205H974V545H875V545H820V500H510V560H455V500H140V545H26Z';
+const floorOneOutline = 'M26 230H90V230H210V310H335V230H405V180H450V230H598V310H650V230H850V310H875V230H974V530H875V530H820V445H510V530H455V445H140V530H26Z';
 
 const floorOneOpenSpaces: Record<string, { fillPath: string; wallPath: string }> = {
-  'lobby-1': { fillPath: 'M90 300H155V390H140V545H90Z', wallPath: 'M90 300V545H140V390' },
-  'main-entrance-1': { fillPath: 'M455 375H510V560H455Z', wallPath: 'M455 390V560H510V390' },
-  'east-lobby-1': { fillPath: 'M820 300H875V545H820V390', wallPath: 'M875 300V545H820V390' },
+  'lobby-1': { fillPath: 'M90 310H155V365H140V530H90Z', wallPath: 'M90 310V530H140V365' },
+  'main-entrance-1': { fillPath: 'M455 350H510V530H455Z', wallPath: 'M455 365V530H510V365' },
+  'east-lobby-1': { fillPath: 'M820 310H875V530H820V365', wallPath: 'M875 310V530H820V365' },
 };
 
 function buildRoomBoxes(nodes: NavigationNode[]): RoomBox[] {
@@ -127,7 +127,7 @@ export function RouteMap({ nodes, edges, route, selectedFloor, currentStep, onFl
   const viewBoxWidth = 1280;
   const horizontalOrigin = 20;
   const scaleX = 1.28;
-  const scaleY = selectedFloor === 1 ? 1.28 : 1.12;
+  const scaleY = selectedFloor === 1 ? 1 : 1.12;
   const scalePointX = (x: number) => horizontalOrigin + ((x - horizontalOrigin) * scaleX);
   const scalePointY = (y: number) => 350 + ((y - 350) * scaleY);
   const layoutTransform = `translate(${horizontalOrigin * (1 - scaleX)} ${350 * (1 - scaleY)}) scale(${scaleX} ${scaleY})`;
@@ -138,9 +138,9 @@ export function RouteMap({ nodes, edges, route, selectedFloor, currentStep, onFl
         <div><p className="eyebrow">SIMPLIFIED FLOOR PLAN</p><h2 id="map-title">학교 안내 지도</h2></div>
         <FloorSelector selectedFloor={selectedFloor} routeFloors={routeFloors} onChange={onFloorChange} />
       </div>
-      <div className="map-frame" tabIndex={0} aria-label={`${selectedFloor}층 지도. 좌우로 이동하여 전체 지도를 볼 수 있습니다.`}>
+      <div className="map-frame" aria-label={`${selectedFloor}층 학교 안내 지도`}>
         <div className="floor-label" aria-hidden="true"><strong>{selectedFloor}</strong><span>FLOOR</span></div>
-        <span className="map-source-note">본관 배치 기반 간략도 · 좌우로 이동</span>
+        <span className="map-source-note">본관 배치 기반 간략도</span>
         <svg className="floorplan-mode" viewBox={`0 0 ${viewBoxWidth} 700`} role="img" aria-labelledby="map-svg-title map-svg-desc">
           <title id="map-svg-title">본관 {selectedFloor}층 경로 지도</title>
           <desc id="map-svg-desc">실제 본관의 긴 중앙 복도와 복도 양쪽 공간을 단순화하고 장소 노드와 이동 경로를 표시한 지도입니다.</desc>
@@ -148,8 +148,8 @@ export function RouteMap({ nodes, edges, route, selectedFloor, currentStep, onFl
             {selectedFloor === 1
               ? <path className="building-outline" d={floorOneOutline} />
               : <rect className="building-outline" x="24" y="72" width="952" height="574" rx="16" />}
-            <rect className="corridor-area" x={selectedFloor === 1 ? 140 : 24} y="300" width={selectedFloor === 1 ? 735 : 952} height="90" />
-            <path className="corridor-centerline" d={selectedFloor === 1 ? 'M140 350H875' : 'M42 350H958'} />
+            <rect className="corridor-area" x={selectedFloor === 1 ? 140 : 24} y={selectedFloor === 1 ? 310 : 300} width={selectedFloor === 1 ? 735 : 952} height={selectedFloor === 1 ? 55 : 90} />
+            <path className="corridor-centerline" d={selectedFloor === 1 ? 'M140 338H875' : 'M42 350H958'} />
             <text className="corridor-label" x="500" y="338" textAnchor="middle">{selectedFloor}층 본관 중앙 복도</text>
             {roomBoxes.map(({ node, x, y, width, height }) => {
               const openSpace = floorOneOpenSpaces[node.id];
