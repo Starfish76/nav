@@ -36,42 +36,53 @@ interface RoomBox {
 }
 
 const floorOneBoxes: Record<string, { x: number; y: number; width: number; height: number; doorPath: string }> = {
-  'wee-class-1': { x: 26, y: 230, width: 64, height: 150, doorPath: '' },
-  'health-1': { x: 26, y: 380, width: 64, height: 150, doorPath: '' },
-  'lobby-1': { x: 90, y: 365, width: 50, height: 165, doorPath: '' },
-  'stairs-west-1': { x: 90, y: 230, width: 50, height: 80, doorPath: '' },
-  'male-wc-1': { x: 140, y: 230, width: 70, height: 80, doorPath: '' },
-  'class-1-1': { x: 140, y: 365, width: 80, height: 80, doorPath: '' },
-  'class-1-2': { x: 220, y: 365, width: 75, height: 80, doorPath: '' },
-  'vice-principal-1': { x: 295, y: 365, width: 45, height: 80, doorPath: '' },
-  'support-a-1': { x: 340, y: 365, width: 45, height: 80, doorPath: '' },
-  'administration-1': { x: 385, y: 365, width: 70, height: 80, doorPath: '' },
-  'grade1-office-1': { x: 335, y: 230, width: 70, height: 80, doorPath: '' },
-  'print-room-1': { x: 405, y: 230, width: 45, height: 80, doorPath: '' },
-  'warehouse-1': { x: 405, y: 180, width: 45, height: 50, doorPath: '' },
-  'stairs-1': { x: 450, y: 230, width: 38, height: 80, doorPath: '' },
-  'accessible-female-wc-1': { x: 488, y: 230, width: 42, height: 80, doorPath: '' },
-  'accessible-wc-1': { x: 530, y: 230, width: 38, height: 80, doorPath: '' },
-  'elevator-1': { x: 568, y: 230, width: 30, height: 80, doorPath: '' },
-  'main-entrance-1': { x: 455, y: 365, width: 55, height: 165, doorPath: '' },
-  'class-1-3': { x: 510, y: 365, width: 90, height: 80, doorPath: '' },
-  'class-1-4': { x: 600, y: 365, width: 70, height: 80, doorPath: '' },
-  'class-1-5': { x: 670, y: 365, width: 75, height: 80, doorPath: '' },
-  'class-1-6': { x: 745, y: 365, width: 75, height: 80, doorPath: '' },
-  'facility-storage-1': { x: 650, y: 230, width: 70, height: 80, doorPath: '' },
-  'female-wc-east-1': { x: 720, y: 230, width: 55, height: 80, doorPath: '' },
-  'stairs-east-1': { x: 775, y: 230, width: 30, height: 80, doorPath: '' },
-  'machine-room-1': { x: 805, y: 230, width: 45, height: 80, doorPath: '' },
-  'east-lobby-1': { x: 820, y: 365, width: 55, height: 165, doorPath: '' },
-  'library-1': { x: 875, y: 230, width: 99, height: 300, doorPath: '' },
+  'wee-class-1': { x: 26, y: 312.221, width: 64, height: 67.779, doorPath: '' },
+  'health-1': { x: 26, y: 380, width: 64, height: 53.334, doorPath: '' },
+  'lobby-1': { x: 90, y: 336.666, width: 65, height: 96.668, doorPath: '' },
+  'stairs-west-1': { x: 90, y: 265.555, width: 50, height: 70, doorPath: '' },
+  'male-wc-1': { x: 141.111, y: 265.555, width: 62.222, height: 61.111, doorPath: '' },
+  'class-1-1': { x: 140, y: 365, width: 80, height: 32.223, doorPath: '' },
+  'class-1-2': { x: 220, y: 365, width: 75, height: 32.223, doorPath: '' },
+  'vice-principal-1': { x: 295, y: 365, width: 45, height: 32.223, doorPath: '' },
+  'support-a-1': { x: 340, y: 365, width: 45, height: 32.223, doorPath: '' },
+  'administration-1': { x: 385, y: 365, width: 70, height: 32.223, doorPath: '' },
+  'grade1-office-1': { x: 385, y: 294.444, width: 70, height: 32.223, doorPath: '' },
+  'print-room-1': { x: 455, y: 294.444, width: 55, height: 32.223, doorPath: '' },
+  'warehouse-1': { x: 455, y: 265.555, width: 55, height: 28.889, doorPath: '' },
+  'stairs-1': { x: 511.11, y: 294.444, width: 54.667, height: 32.223, doorPath: '' },
+  'accessible-female-wc-1': { x: 566.888, y: 294.444, width: 42, height: 32.223, doorPath: '' },
+  'accessible-wc-1': { x: 608.888, y: 294.444, width: 38, height: 32.223, doorPath: '' },
+  'elevator-1': { x: 647.999, y: 303.333, width: 30, height: 23.334, doorPath: '' },
+  'main-entrance-1': { x: 455, y: 356.667, width: 110.555, height: 91.112, doorPath: '' },
+  'class-1-3': { x: 566.666, y: 366.111, width: 90, height: 35.556, doorPath: '' },
+  'class-1-4': { x: 657.777, y: 366.111, width: 70, height: 35.556, doorPath: '' },
+  'class-1-5': { x: 727.777, y: 366.111, width: 75, height: 35.556, doorPath: '' },
+  'class-1-6': { x: 802.777, y: 366.111, width: 75, height: 35.556, doorPath: '' },
+  'facility-storage-1': { x: 727.777, y: 303.333, width: 55.556, height: 23.334, doorPath: '' },
+  'machine-room-1': { x: 783.333, y: 265.555, width: 34.444, height: 61.111, doorPath: '' },
+  'female-wc-east-1': { x: 817.777, y: 265.555, width: 58.333, height: 60, doorPath: '' },
+  'stairs-east-1': { x: 876.659, y: 265.555, width: 51.111, height: 61.111, doorPath: '' },
+  'east-lobby-1': { x: 876.666, y: 326.333, width: 51.667, height: 114.779, doorPath: '' },
+  'library-1': { x: 928.333, y: 309.999, width: 61.223, height: 131.113, doorPath: '' },
 };
 
-const floorOneOutline = 'M26 230H90V230H210V310H335V230H405V180H450V230H598V310H650V230H850V310H875V230H974V530H875V530H820V445H510V530H455V445H140V530H26Z';
+const floorOneOutline = 'M26 312.221H90V265.555H203.333V326.667H385V294.444H455V265.555H510V294.444H647.999V303.333H677.999V326.667H727.777V303.333H783.333V265.555H927.77V309.999H989.556V441.112H928.333V441.112H876.666V401.667H565.555V447.779H455V397.223H140V433.334H26Z';
+
+const floorOneCorridor = { x: 140, y: 326.666, width: 737.222, height: 38.334, centerY: 346.182 };
 
 const floorOneOpenSpaces: Record<string, { fillPath: string; wallPath: string }> = {
-  'lobby-1': { fillPath: 'M90 310H155V365H140V530H90Z', wallPath: 'M90 310V530H140V365' },
-  'main-entrance-1': { fillPath: 'M455 350H510V530H455Z', wallPath: 'M455 365V530H510V365' },
-  'east-lobby-1': { fillPath: 'M820 310H875V530H820V365', wallPath: 'M875 310V530H820V365' },
+  'lobby-1': {
+    fillPath: 'M90 336.666H155V360.833H140V433.334H90Z',
+    wallPath: 'M90 336.666V433.334H140V360.833',
+  },
+  'main-entrance-1': {
+    fillPath: 'M455 356.667H565.555V447.779H455Z',
+    wallPath: 'M455 364.259V447.779H565.555V364.259',
+  },
+  'east-lobby-1': {
+    fillPath: 'M876.666 326.333H928.333V441.112H876.666V355.028',
+    wallPath: 'M928.333 326.333V441.112H876.666V355.028',
+  },
 };
 
 function buildRoomBoxes(nodes: NavigationNode[]): RoomBox[] {
@@ -148,21 +159,21 @@ export function RouteMap({ nodes, edges, route, selectedFloor, currentStep, onFl
             {selectedFloor === 1
               ? <path className="building-outline" d={floorOneOutline} />
               : <rect className="building-outline" x="24" y="72" width="952" height="574" rx="16" />}
-            <rect className="corridor-area" x={selectedFloor === 1 ? 140 : 24} y={selectedFloor === 1 ? 310 : 300} width={selectedFloor === 1 ? 735 : 952} height={selectedFloor === 1 ? 55 : 90} />
-            <path className="corridor-centerline" d={selectedFloor === 1 ? 'M140 338H875' : 'M42 350H958'} />
-            <text className="corridor-label" x="500" y="338" textAnchor="middle">{selectedFloor}층 본관 중앙 복도</text>
+            <rect
+              className="corridor-area"
+              x={selectedFloor === 1 ? floorOneCorridor.x : 24}
+              y={selectedFloor === 1 ? floorOneCorridor.y : 300}
+              width={selectedFloor === 1 ? floorOneCorridor.width : 952}
+              height={selectedFloor === 1 ? floorOneCorridor.height : 90}
+            />
+            <path className="corridor-centerline" d={selectedFloor === 1 ? `M${floorOneCorridor.x} ${floorOneCorridor.centerY}H${floorOneCorridor.x + floorOneCorridor.width}` : 'M42 350H958'} />
+            <text className="corridor-label" x="507" y={selectedFloor === 1 ? floorOneCorridor.centerY - 7 : 338} textAnchor="middle">{selectedFloor}층 본관 중앙 복도</text>
             {roomBoxes.map(({ node, x, y, width, height }) => {
               const openSpace = floorOneOpenSpaces[node.id];
               if (openSpace) {
                 return <g key={`room-box-${node.id}`} className="open-hall-space">
                   <path className="open-hall-fill" d={openSpace.fillPath} />
                   <path className="open-hall-walls" d={openSpace.wallPath} />
-                </g>;
-              }
-              if (node.id === 'stairs-west-1') {
-                return <g key={`room-box-${node.id}`} className="room-space stairs partial-room">
-                  <rect className="partial-room-fill" x={x} y={y} width={width} height={height} />
-                  <path className="partial-room-outline" d={`M${x} ${y + height}V${y}H${x + width}V${y + height}`} />
                 </g>;
               }
               return <g key={`room-box-${node.id}`} className={`room-space ${node.type}`}>
