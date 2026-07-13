@@ -46,13 +46,21 @@ export default function App() {
     <><Header /><main id="main-content" className="page-shell">
       <div className="intro-line"><span>본관 · 1–3층</span><p>정확한 평면도가 아닌 주요 이동 지점을 연결한 안내 지도입니다.</p></div>
       <div className="dashboard-grid">
-        <aside className="sidebar"><RouteForm nodes={navigationNodes} startId={selectedStartId} endId={selectedEndId} mode={travelMode} onStartChange={setSelectedStartId} onEndChange={setSelectedEndId} onModeChange={setTravelMode} onSubmit={findRoute} onSwap={swap} onReset={reset} />
-          {errorMessage && <div className="error-message" role="alert"><strong>경로를 확인해 주세요</strong><span>{errorMessage}</span></div>}
-          <RouteSummary steps={steps} totalCost={routeResult?.totalCost ?? 0} mode={travelMode} />
-        </aside>
+        <div className="top-card-grid">
+          <RouteForm nodes={navigationNodes} startId={selectedStartId} endId={selectedEndId} mode={travelMode} onStartChange={setSelectedStartId} onEndChange={setSelectedEndId} onModeChange={setTravelMode} onSubmit={findRoute} onSwap={swap} onReset={reset} />
+          <div className="route-result-column">
+            {errorMessage && <div className="error-message" role="alert"><strong>경로를 확인해 주세요</strong><span>{errorMessage}</span></div>}
+            {routeResult
+              ? <RouteSummary steps={steps} totalCost={routeResult.totalCost} mode={travelMode} />
+              : <section className="card summary-card summary-placeholder" aria-live="polite">
+                  <div><p className="eyebrow">RECOMMENDED ROUTE</p><h2>추천 경로</h2></div>
+                  <div className="summary-placeholder-content"><span aria-hidden="true">↗</span><strong>이동 경로를 찾아보세요</strong><p>출발지와 목적지를 선택하고 경로 찾기 버튼을 누르면 이동 요약이 표시됩니다.</p></div>
+                </section>}
+          </div>
+        </div>
         <RouteMap nodes={navigationNodes} edges={navigationEdges} route={routeResult} selectedFloor={selectedFloor} currentStep={currentStep} onFloorChange={setSelectedFloor} />
       </div>
-      {routeResult ? <InstructionList steps={steps} currentStep={currentStep} speechStatus={speechStatus} onStepSelect={selectStep} onPrevious={() => changeStep(currentStep - 1)} onNext={() => changeStep(currentStep + 1)} onRestart={() => changeStep(0)} onSpeakAll={() => speak(steps.map((step, index) => `${index + 1}단계. ${step.edge.instruction}`).join(' '))} onSpeakCurrent={() => speak(`${currentStep + 1}단계. ${steps[currentStep]?.edge.instruction ?? ''}`)} onStopSpeech={() => { stopSpeech(); setSpeechStatus('음성 안내를 중지했습니다.'); }} /> : <section className="empty-state" aria-live="polite"><span aria-hidden="true">↗</span><div><strong>이동 경로를 찾아보세요</strong><p>경로를 찾으면 추천 동선과 단계별 안내가 여기에 표시됩니다.</p></div></section>}
+      {routeResult && <InstructionList steps={steps} currentStep={currentStep} speechStatus={speechStatus} onStepSelect={selectStep} onPrevious={() => changeStep(currentStep - 1)} onNext={() => changeStep(currentStep + 1)} onRestart={() => changeStep(0)} onSpeakAll={() => speak(steps.map((step, index) => `${index + 1}단계. ${step.edge.instruction}`).join(' '))} onSpeakCurrent={() => speak(`${currentStep + 1}단계. ${steps[currentStep]?.edge.instruction ?? ''}`)} onStopSpeech={() => { stopSpeech(); setSpeechStatus('음성 안내를 중지했습니다.'); }} />}
     </main><footer>Accessible School Navigator <span>·</span> 학교 배리어프리 이동 지원 프로젝트</footer></>
   );
 }

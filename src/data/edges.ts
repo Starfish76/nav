@@ -33,6 +33,8 @@ interface RoomConnection {
 const roomConnections: RoomConnection[] = [
   // 1층: 안내도 왼쪽에서 오른쪽 순서
   { node: 'wee-class-1', hall: 'hall-1-1' }, { node: 'health-1', hall: 'hall-1-1' },
+  { node: 'lobby-1', hall: 'hall-1-1', type: 'corridor' }, { node: 'male-wc-1', hall: 'hall-1-1' },
+  { node: 'stairs-west-1', hall: 'hall-1-1', type: 'corridor' },
   { node: 'class-1-1', hall: 'hall-1-2' }, { node: 'class-1-2', hall: 'hall-1-2' },
   { node: 'grade1-office-1', hall: 'hall-1-3' }, { node: 'print-room-1', hall: 'hall-1-3' },
   { node: 'warehouse-1', hall: 'hall-1-4', accessible: false, width: 0.85 },
