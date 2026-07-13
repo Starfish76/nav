@@ -40,11 +40,14 @@ const roomConnections: RoomConnection[] = [
   { node: 'warehouse-1', hall: 'hall-1-4', accessible: false, width: 0.85 },
   { node: 'vice-principal-1', hall: 'hall-1-3' }, { node: 'support-a-1', hall: 'hall-1-4' },
   { node: 'administration-1', hall: 'hall-1-5' }, { node: 'elevator-1', hall: 'hall-1-5', type: 'corridor' },
-  { node: 'accessible-wc-1', hall: 'hall-1-5' }, { node: 'main-entrance-1', hall: 'hall-1-5', type: 'ramp', distance: 8 },
+  { node: 'accessible-female-wc-1', hall: 'hall-1-5' }, { node: 'accessible-wc-1', hall: 'hall-1-5' },
+  { node: 'main-entrance-1', hall: 'hall-1-5', type: 'ramp', distance: 8 },
   { node: 'stairs-1', hall: 'hall-1-6', type: 'corridor' }, { node: 'class-1-3', hall: 'hall-1-6' },
   { node: 'class-1-4', hall: 'hall-1-6' }, { node: 'class-1-5', hall: 'hall-1-7' },
   { node: 'class-1-6', hall: 'hall-1-8' }, { node: 'facility-storage-1', hall: 'hall-1-7' },
-  { node: 'machine-room-1', hall: 'hall-1-7', accessible: false, hasObstacle: true }, { node: 'library-1', hall: 'hall-1-8' },
+  { node: 'female-wc-east-1', hall: 'hall-1-7' }, { node: 'stairs-east-1', hall: 'hall-1-7', type: 'corridor' },
+  { node: 'machine-room-1', hall: 'hall-1-8', accessible: false, hasObstacle: true },
+  { node: 'east-lobby-1', hall: 'hall-1-8', type: 'corridor' }, { node: 'library-1', hall: 'hall-1-8' },
 
   // 2층
   { node: 'art-prep-2', hall: 'hall-2-1' }, { node: 'art-room-2', hall: 'hall-2-1' },

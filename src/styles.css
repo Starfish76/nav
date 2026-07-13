@@ -52,8 +52,11 @@ button.secondary { padding-inline: 14px; background: #f5f8f9; }
 .floor-selector button { min-width: 67px; min-height: 36px; border: 0; background: transparent; font-size: .78rem; }
 .floor-selector button.active { color: white; background: var(--navy); box-shadow: 0 2px 7px rgba(12,40,64,.2); }
 .route-dot { color: #55d4bd; margin-left: 2px; font-size: .58rem; }
-.map-frame { position: relative; margin: 16px; height: 548px; background: #f7faf9; border: 1px solid #dbe6e6; border-radius: 12px; overflow: hidden; }
-.map-frame svg { width: 100%; height: 100%; display: block; }
+.map-frame { position: relative; margin: 16px; height: 548px; background: #f7faf9; border: 1px solid #dbe6e6; border-radius: 12px; overflow-x: auto; overflow-y: hidden; scrollbar-color: #78939d #e7eeee; scrollbar-width: thin; }
+.map-frame svg { width: 100%; min-width: clamp(1450px, 125vw, 1750px); height: 100%; display: block; }
+.map-frame::-webkit-scrollbar { height: 10px; }
+.map-frame::-webkit-scrollbar-track { background: #e7eeee; }
+.map-frame::-webkit-scrollbar-thumb { background: #78939d; border: 2px solid #e7eeee; border-radius: 8px; }
 .map-source-note { position: absolute; z-index: 3; right: 14px; bottom: 12px; padding: 5px 8px; color: #244b5c; background: rgba(255,255,255,.88); border: 1px solid rgba(114,142,151,.45); border-radius: 12px; font-size: .58rem; font-weight: 700; }
 .building-outline { fill: #faf8ec; stroke: #294957; stroke-width: 5; }
 .corridor-area { fill: #eef2ee; stroke: #435e66; stroke-width: 2; }
@@ -69,7 +72,6 @@ button.secondary { padding-inline: 14px; background: #f5f8f9; }
 .room-space.stairs .partial-room-fill { fill: #f2e4dc; stroke: none; }
 .partial-room-outline { fill: none; stroke: #a85f4b; stroke-width: 2; }
 .room-space.entrance rect { fill: #dceee8; stroke: #227c69; stroke-width: 3; }
-.door-mark { fill: none; stroke: #fff; stroke-width: 7; stroke-linecap: square; }
 .floor-label { position: absolute; z-index: 2; left: 18px; top: 17px; display: flex; align-items: baseline; gap: 4px; color: #c8d4d7; }
 .floor-label strong { font-size: 2rem; line-height: 1; }
 .floor-label span { font-size: .56rem; font-weight: 800; letter-spacing: .1em; }
@@ -84,25 +86,25 @@ button.secondary { padding-inline: 14px; background: #f5f8f9; }
 .map-edge.route { stroke: #11877d; stroke-width: 14; stroke-dasharray: none; filter: drop-shadow(0 2px 3px rgba(0,86,79,.25)); }
 .map-edge.current { stroke: #f09b35; stroke-width: 21; stroke-dasharray: 15 8; animation: route-flow 1s linear infinite; }
 @keyframes route-flow { to { stroke-dashoffset: -23; } }
-.map-node circle { fill: white; stroke: #668897; stroke-width: 5; }
-.floorplan-mode .map-node circle { filter: drop-shadow(0 1px 3px rgba(18,47,60,.38)); }
-.map-node.hallway circle { fill: #668897; stroke: white; stroke-width: 3; }
-.map-node.elevator circle { fill: #d7eef1; stroke: #297588; }
-.map-node.stairs circle { fill: #fff1ed; stroke: #bd674f; }
-.map-node.restroom circle, .map-node.ramp circle { fill: #e6f4f0; stroke: #168377; }
-.map-node.start circle { fill: #d8f3e8; stroke: #087d61; stroke-width: 8; }
-.map-node.end circle { fill: #ffebe5; stroke: #c75538; stroke-width: 8; }
-.map-node.current-position > circle:first-child { fill: #fff2d8; stroke: #e68b20; stroke-width: 9; }
-.node-symbol { fill: #244a5e; font-size: 14px; text-anchor: middle; font-weight: 800; pointer-events: none; }
-.hallway .node-symbol { fill: white; }
-.node-name { fill: #193b4d; font-size: 13px; text-anchor: middle; paint-order: stroke; stroke: #f7faf9; stroke-width: 5px; stroke-linejoin: round; font-weight: 700; }
-.pulse-ring { fill: none !important; stroke: #e68b20 !important; stroke-width: 4 !important; animation: pulse 1.5s ease-out infinite; }
-@keyframes pulse { 0% { r: 31px; opacity: 1; } 100% { r: 54px; opacity: 0; } }
+.node-label-box { fill: #fff; stroke: #506f7c; stroke-width: 2; filter: drop-shadow(0 1px 2px rgba(18,47,60,.24)); }
+.node-label-text { fill: #173b4d; font-size: 10.5px; text-anchor: middle; font-weight: 800; pointer-events: none; }
+.map-node.room .node-label-box { fill: #fffef0; }
+.map-node.facility .node-label-box { fill: #f3f6e7; }
+.map-node.elevator .node-label-box { fill: #dff1f3; stroke: #27768a; }
+.map-node.stairs .node-label-box { fill: #fff0ea; stroke: #ad624d; }
+.map-node.restroom .node-label-box { fill: #e7f5f0; stroke: #267b70; }
+.map-node.entrance .node-label-box { fill: #e2f3ed; stroke: #147563; }
+.map-node.hallway .node-label-box { fill: #fff3dc; stroke: #df8927; }
+.map-node.start .node-label-box { fill: #d8f3e8; stroke: #087d61; stroke-width: 4; }
+.map-node.end .node-label-box { fill: #ffebe5; stroke: #c75538; stroke-width: 4; }
+.map-node.current-position .node-label-box { fill: #fff2d8; stroke: #e68b20; stroke-width: 4; }
+.pulse-box { fill: none; stroke: #e68b20; stroke-width: 3; animation: pulse-box 1.5s ease-out infinite; }
+@keyframes pulse-box { 0% { opacity: 1; transform: scale(1); transform-origin: center; } 100% { opacity: 0; transform: scale(1.22); transform-origin: center; } }
 .empty-floor-note { fill: #af5b40; font-size: 15px; font-weight: 700; }
 .map-legend { display: flex; flex-wrap: wrap; gap: 16px; padding: 0 22px 18px; color: #607783; font-size: .68rem; }
 .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend-line { width: 26px; height: 0; border-top: 4px solid; border-radius: 4px; }.legend-line.route { border-color: #11877d; }.legend-line.current { border-color: #f09b35; border-top-width: 6px; }.legend-line.blocked { border-color: #c97860; border-top-style: dashed; }
-.legend-node { width: 12px; height: 12px; border-radius: 50%; border: 3px solid; }.legend-node.start { background: #d8f3e8; border-color: #087d61; }.legend-node.end { background: #ffebe5; border-color: #c75538; }
+.legend-node { width: 15px; height: 11px; border-radius: 3px; border: 3px solid; }.legend-node.start { background: #d8f3e8; border-color: #087d61; }.legend-node.end { background: #ffebe5; border-color: #c75538; }
 .summary-title { display: flex; align-items: center; justify-content: space-between; }
 .summary-placeholder { min-height: 100%; display: grid; grid-template-rows: auto 1fr; }
 .summary-placeholder h2 { margin: 2px 0 0; color: var(--navy); font-size: 1.25rem; }
@@ -130,6 +132,6 @@ footer { min-height: 80px; display: flex; justify-content: center; align-items: 
 }
 @media (max-width: 720px) { .top-card-grid { grid-template-columns: 1fr; }.summary-placeholder-content { min-height: 190px; } }
 @media (max-width: 560px) {
-  .site-header { min-height: 145px; padding: 24px 5%; gap: 13px; }.header-mark { width: 52px; height: 52px; border-radius: 15px; font-size: 27px; }.site-header h1 { font-size: 1.45rem; }.site-header p { font-size: .75rem; }.page-shell { width: 94%; padding-top: 12px; }.intro-line { align-items: flex-start; gap: 8px; }.intro-line p { text-align: right; font-size: .68rem; }.route-form-card, .summary-card, .instructions-card { padding: 18px; }.map-topbar { display: grid; gap: 12px; padding: 14px; }.floor-selector button { min-width: 52px; padding: 0 6px; }.map-frame { margin: 8px; height: 400px; }.map-legend { padding: 4px 12px 14px; gap: 10px; }.node-name { font-size: 15px; }.instructions-header { align-items: flex-start; }.simulation-controls { display: grid; grid-template-columns: 1fr 1fr; }.simulation-controls .primary { grid-column: 1 / -1; grid-row: 1; }.instruction-list li button { padding: 11px; }.summary-grid { grid-template-columns: 1fr; }
+  .site-header { min-height: 145px; padding: 24px 5%; gap: 13px; }.header-mark { width: 52px; height: 52px; border-radius: 15px; font-size: 27px; }.site-header h1 { font-size: 1.45rem; }.site-header p { font-size: .75rem; }.page-shell { width: 94%; padding-top: 12px; }.intro-line { align-items: flex-start; gap: 8px; }.intro-line p { text-align: right; font-size: .68rem; }.route-form-card, .summary-card, .instructions-card { padding: 18px; }.map-topbar { display: grid; gap: 12px; padding: 14px; }.floor-selector button { min-width: 52px; padding: 0 6px; }.map-frame { margin: 8px; height: 400px; }.map-legend { padding: 4px 12px 14px; gap: 10px; }.instructions-header { align-items: flex-start; }.simulation-controls { display: grid; grid-template-columns: 1fr 1fr; }.simulation-controls .primary { grid-column: 1 / -1; grid-row: 1; }.instruction-list li button { padding: 11px; }.summary-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
