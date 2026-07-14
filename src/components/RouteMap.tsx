@@ -255,7 +255,7 @@ export function RouteMap({ nodes, edges, route, selectedFloor, onFloorChange }: 
           <g className="building-layout" transform={layoutTransform} aria-hidden="true">
             {selectedFloor >= 2
               ? <>
-                <image href={selectedFloor === 2 ? '/svg%20(1).svg' : '/svg%20(2).svg'} x="0" y="0" width="1000" height="700" preserveAspectRatio="none" />
+                <image href={`${import.meta.env.BASE_URL}${selectedFloor === 2 ? 'svg%20(1).svg' : 'svg%20(2).svg'}`} x="0" y="0" width="1000" height="700" preserveAspectRatio="none" />
                 <path className="building-outline building-outline-overlay" d={selectedFloor === 2 ? floorTwoOutline : floorThreeOutline} />
               </>
               : <>
