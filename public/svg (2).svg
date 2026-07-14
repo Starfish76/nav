@@ -9,12 +9,12 @@
   <rect id="svg_6" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="37.667" width="64" y="350" x="26" class="room"/>
   <rect id="svg_7" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="37.667" width="64" y="387.667" x="26" class="room"/>
   <rect stroke="#a85f4b" id="svg_9" stroke-width="2" fill="#f2e4dc" height="61.37402" width="50" y="265.29199" x="90" class="stairs"/>
-  <rect stroke="#435e66" id="svg_10" stroke-width="2" fill="#eef2ee" height="70.38666" width="50" y="326.66601" x="90" class="lobby"/>
-  <rect stroke="#435e66" id="svg_11" stroke-width="2" fill="#e4ead2" height="27.22888" width="50" y="398.10511" x="90" class="facility"/>
+  <rect stroke="#435e66" id="svg_10" stroke-width="2" fill="#eef2ee" height="75.33399" width="50" y="326.66601" x="90" class="lobby"/>
+  <rect stroke="#435e66" id="svg_11" stroke-width="2" fill="#e4ead2" height="23.33399" width="50" y="402" x="90" class="facility"/>
   <rect id="svg_12" stroke-width="2" stroke="#2e7c70" fill="#dff0e9" height="61.111" width="63.333" y="265.555" x="140" class="restroom"/>
-  <rect stroke="#435e66" id="svg_13" stroke-width="2" fill="#f1efc9" height="32.223" width="77.63155" y="365" x="213.68432" class="room"/>
-  <rect stroke="#435e66" id="svg_14" stroke-width="2" fill="#f1efc9" height="32.223" width="78.68417" y="365" x="291.31584" class="room"/>
-  <rect stroke="#435e66" id="svg_15" stroke-width="2" fill="#f1efc9" height="32.223" width="86.05261" y="365" x="368.94739" class="room"/>
+  <rect stroke="#435e66" id="svg_13" stroke-width="2" fill="#f1efc9" height="37" width="77.63155" y="365" x="213.68432" class="room"/>
+  <rect stroke="#435e66" id="svg_14" stroke-width="2" fill="#f1efc9" height="37" width="78.68417" y="365" x="291.31584" class="room"/>
+  <rect stroke="#435e66" id="svg_15" stroke-width="2" fill="#f1efc9" height="37" width="86.05261" y="365" x="368.94739" class="room"/>
   <rect stroke="#435e66" id="svg_16" stroke-width="2" fill="#f1efc9" height="32.223" width="124.73647" y="294.444" x="385" class="room"/>
   <rect id="svg_18" stroke-width="2" stroke="#a85f4b" fill="#f2e4dc" height="32.223" width="54.667" y="294.444" x="511.11" class="stairs"/>
   <rect id="svg_19" stroke-width="2" stroke="#435e66" fill="#eef2ee" height="37" width="110.555" y="365" x="455" class="lobby"/>
@@ -25,11 +25,11 @@
   <rect stroke="#435e66" id="svg_24" stroke-width="2" fill="#f1efc9" height="36.667" width="72.82381" y="365" x="729.10528" class="room"/>
   <rect id="svg_26" stroke-width="2" stroke="#2e7c70" fill="#dff0e9" height="61.111" width="58.333" y="265.555" x="817.777" class="restroom"/>
   <rect stroke="#a85f4b" id="svg_27" stroke-width="2" fill="#f2e4dc" height="61.111" width="51.667" y="265.555" x="876.666" class="stairs"/>
-  <rect stroke="#435e66" id="svg_28" stroke-width="2" fill="#eef2ee" height="69.73688" width="51.667" y="326.66601" x="876.666" class="lobby"/>
-  <rect id="svg_30" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="36.112" width="51.667" y="397" x="876.666" class="room"/>
+  <rect stroke="#435e66" id="svg_28" stroke-width="2" fill="#eef2ee" height="75.33399" width="51.667" y="326.66601" x="876.666" class="lobby"/>
+  <rect id="svg_30" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="31.112" width="51.667" y="402" x="876.666" class="room"/>
   <rect id="svg_31" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="61.557" width="61.223" y="309.999" x="928.333" class="room"/>
   <rect id="svg_32" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="61.556" width="61.223" y="371.556" x="928.333" class="room"/>
-  <path id="svg_35" d="m141.40422,327.89554l71.57903,0l0,69.47376l-71.57903,0l0,-69.47376z" opacity="undefined" stroke="null" fill="#DDDDDD"/>
-  <path stroke="null" id="svg_36" d="m803.51028,327.89554l71.57903,0l0,71.57902l-71.57903,0l0,-71.57902z" opacity="undefined" fill="#DDDDDD"/>
+  <path id="svg_35" d="m141.40422,326.666l71.57903,0l0,75.334l-71.57903,0l0,-75.334z" stroke="#435e66" stroke-width="2" fill="#eef2ee" class="lobby"/>
+  <path id="svg_36" d="m803.51028,326.666l71.57903,0l0,75.334l-71.57903,0l0,-75.334z" stroke="#435e66" stroke-width="2" fill="#eef2ee" class="lobby"/>
  </g>
 </svg>

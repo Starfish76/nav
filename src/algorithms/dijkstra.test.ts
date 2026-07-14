@@ -46,6 +46,31 @@ describe('findShortestPath', () => {
     expect(ibRoute?.nodeIds.slice(0, 2)).toEqual(['ib-seminar-2', 'lobby-east-2']);
   });
 
+  it('3층 양쪽 끝 교과실은 홀의 세로 통로를 거쳐 중앙 복도로 나온다', () => {
+    const westRoute = findShortestPath(navigationNodes, navigationEdges, 'career-guidance-3', 'elevator-3', 'wheelchair');
+    const eastRoute = findShortestPath(navigationNodes, navigationEdges, 'math-room-3', 'elevator-3', 'wheelchair');
+
+    expect(westRoute?.nodeIds.slice(0, 4)).toEqual([
+      'career-guidance-3',
+      'west-hall-3-north',
+      'west-hall-3-entry',
+      'hall-3-1',
+    ]);
+    expect(eastRoute?.nodeIds.slice(0, 4)).toEqual([
+      'math-room-3',
+      'east-hall-3-north',
+      'east-hall-3-entry',
+      'hall-3-11',
+    ]);
+    expect(westRoute?.edgeIds).toContain('f3-west-hall-north');
+    expect(eastRoute?.edgeIds).toContain('f3-east-hall-north');
+
+    const westHallNodes = navigationNodes.filter((node) => node.id.startsWith('west-hall-3-'));
+    const eastHallNodes = navigationNodes.filter((node) => node.id.startsWith('east-hall-3-'));
+    expect(new Set(westHallNodes.map((node) => node.x)).size).toBe(1);
+    expect(new Set(eastHallNodes.map((node) => node.x)).size).toBe(1);
+  });
+
   it('층간 이동에 엘리베이터를 이용한다', () => {
     const route = findShortestPath(navigationNodes, navigationEdges, 'main-entrance-1', 'class-2-1', 'wheelchair');
     expect(route?.edgeIds).toContain('elevator-1-2');
@@ -57,11 +82,23 @@ describe('findShortestPath', () => {
     expect(route?.edgeIds).toEqual(['stairs-1-2', 'stairs-2-3']);
   });
 
+  it('일반 모드에서는 출발지와 목적지에 가장 가까운 계단을 선택한다', () => {
+    const westRoute = findShortestPath(navigationNodes, navigationEdges, 'class-1-1', 'art-room-2', 'normal');
+    const centerRoute = findShortestPath(navigationNodes, navigationEdges, 'grade1-office-1', 'support-b-2', 'normal');
+    const eastRoute = findShortestPath(navigationNodes, navigationEdges, 'library-1', 'history-2', 'normal');
+
+    expect(westRoute?.edgeIds).toContain('stairs-west-1-2');
+    expect(westRoute?.edgeIds).not.toContain('stairs-1-2');
+    expect(centerRoute?.edgeIds).toContain('stairs-1-2');
+    expect(eastRoute?.edgeIds).toContain('stairs-east-1-2');
+    expect(eastRoute?.edgeIds).not.toContain('stairs-1-2');
+  });
+
   it('휠체어 모드에서는 계단을 제외하고 엘리베이터로 우회한다', () => {
     const route = findShortestPath(navigationNodes, navigationEdges, 'main-entrance-1', 'moving-class-3', 'wheelchair');
     expect(route).not.toBeNull();
-    expect(route?.edgeIds).not.toContain('stairs-1-2');
-    expect(route?.edgeIds).not.toContain('stairs-2-3');
+    const usedStairs = route?.edgeIds.some((edgeId) => navigationEdges.find((edge) => edge.id === edgeId)?.type === 'stairs');
+    expect(usedStairs).toBe(false);
     expect(route?.edgeIds).toContain('elevator-1-2');
     expect(route?.edgeIds).toContain('elevator-2-3');
   });

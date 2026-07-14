@@ -72,16 +72,24 @@ const roomConnections: RoomConnection[] = [
   { node: 'history-2' },
 
   // 3층
-  { node: 'career-guidance-3' }, { node: 'korean-room-3' }, { node: 'social-room-3' },
-  { node: 'storage-west-3' }, { node: 'stairs-west-3', type: 'corridor' }, { node: 'lobby-west-3', type: 'corridor' },
-  { node: 'document-room-3', accessible: false, width: 0.85 }, { node: 'male-wc-west-3' }, { node: 'west-lobby-3', type: 'corridor' },
+  { node: 'career-guidance-3', hall: 'west-hall-3-north' },
+  { node: 'korean-room-3', hall: 'west-hall-3-middle' },
+  { node: 'social-room-3', hall: 'west-hall-3-south' },
+  { node: 'stairs-west-3', hall: 'west-hall-3-north', type: 'corridor' },
+  { node: 'lobby-west-3', hall: 'west-hall-3-middle', type: 'corridor' },
+  { node: 'document-room-3', hall: 'west-hall-3-south', accessible: false, width: 0.85 },
+  { node: 'male-wc-west-3', hall: 'west-hall-3-north' },
+  { node: 'west-lobby-3', hall: 'west-hall-3-entry', type: 'corridor' },
   { node: 'class-3-1' }, { node: 'class-3-2' }, { node: 'class-3-3' },
-  { node: 'grade3-office-3' }, { node: 'storage-center-3' }, { node: 'stairs-3', type: 'corridor' },
+  { node: 'grade3-office-3' }, { node: 'stairs-3', type: 'corridor' },
   { node: 'study-lounge-3' }, { node: 'career-class-3' }, { node: 'class-3-4' },
   { node: 'elevator-3', type: 'corridor' }, { node: 'class-3-5' }, { node: 'moving-class-3' },
-  { node: 'female-wc-east-3' }, { node: 'east-lobby-3', type: 'corridor' },
-  { node: 'storage-east-3' }, { node: 'stairs-east-3', type: 'corridor' }, { node: 'east-hall-3', type: 'corridor' },
-  { node: 'support-d-3' }, { node: 'math-room-3' }, { node: 'english-room-3' },
+  { node: 'female-wc-east-3' }, { node: 'east-lobby-3', hall: 'east-hall-3-entry', type: 'corridor' },
+  { node: 'stairs-east-3', hall: 'east-hall-3-north', type: 'corridor' },
+  { node: 'east-hall-3', hall: 'east-hall-3-middle', type: 'corridor' },
+  { node: 'support-d-3', hall: 'east-hall-3-south' },
+  { node: 'math-room-3', hall: 'east-hall-3-north' },
+  { node: 'english-room-3', hall: 'east-hall-3-south' },
 ];
 
 const accessEdges: NavigationEdge[] = roomConnections.map((connection) => {
@@ -192,12 +200,45 @@ const lobbyRoomEdges: NavigationEdge[] = [
   },
 ];
 
+const floorThreeHallEdgeDefinitions = [
+  { id: 'f3-west-hall-access', from: 'hall-3-1', to: 'west-hall-3-entry', instruction: '서쪽 로비를 지나 서쪽 홀로 이동하세요.' },
+  { id: 'f3-west-hall-north', from: 'west-hall-3-north', to: 'west-hall-3-entry', instruction: '서쪽 홀의 세로 통로를 따라 이동하세요.' },
+  { id: 'f3-west-hall-middle', from: 'west-hall-3-entry', to: 'west-hall-3-middle', instruction: '서쪽 홀의 세로 통로를 따라 이동하세요.' },
+  { id: 'f3-west-hall-south', from: 'west-hall-3-middle', to: 'west-hall-3-south', instruction: '서쪽 홀의 세로 통로를 따라 이동하세요.' },
+  { id: 'f3-east-hall-access', from: 'hall-3-11', to: 'east-hall-3-entry', instruction: '동쪽 로비를 지나 동쪽 홀로 이동하세요.' },
+  { id: 'f3-east-hall-north', from: 'east-hall-3-north', to: 'east-hall-3-entry', instruction: '동쪽 홀의 세로 통로를 따라 이동하세요.' },
+  { id: 'f3-east-hall-middle', from: 'east-hall-3-entry', to: 'east-hall-3-middle', instruction: '동쪽 홀의 세로 통로를 따라 이동하세요.' },
+  { id: 'f3-east-hall-south', from: 'east-hall-3-middle', to: 'east-hall-3-south', instruction: '동쪽 홀의 세로 통로를 따라 이동하세요.' },
+] as const;
+
+const floorThreeHallEdges: NavigationEdge[] = floorThreeHallEdgeDefinitions.map(({ id, from, to, instruction }) => {
+  const fromNode = nodeById.get(from);
+  const toNode = nodeById.get(to);
+  if (!fromNode || !toNode) throw new Error(`${id}에 연결할 3층 홀 노드를 찾을 수 없습니다.`);
+  return {
+    id,
+    from,
+    to,
+    distance: Math.max(1, (Math.abs(toNode.x - fromNode.x) + Math.abs(toNode.y - fromNode.y)) / 10),
+    accessible: true,
+    type: 'corridor',
+    width: 1.4,
+    instruction,
+    bidirectional: true,
+  };
+});
+
 export const navigationEdges: NavigationEdge[] = [
   ...corridorEdges,
   ...accessEdges,
   ...lobbyRoomEdges,
+  ...floorThreeHallEdges,
   { id: 'elevator-1-2', from: 'elevator-1', to: 'elevator-2', distance: 12, accessible: true, type: 'elevator', width: 1.1, instruction: '엘리베이터를 이용해 1층과 2층 사이를 이동하세요.', bidirectional: true },
   { id: 'elevator-2-3', from: 'elevator-2', to: 'elevator-3', distance: 12, accessible: true, type: 'elevator', width: 1.1, instruction: '엘리베이터를 이용해 2층과 3층 사이를 이동하세요.', bidirectional: true },
+  { id: 'stairs-west-1-2', from: 'stairs-west-1', to: 'stairs-west-2', distance: 7, accessible: false, type: 'stairs', instruction: '서쪽 계단을 이용해 1층과 2층 사이를 이동하세요.', bidirectional: true },
+  { id: 'stairs-west-2-3', from: 'stairs-west-2', to: 'stairs-west-3', distance: 7, accessible: false, type: 'stairs', instruction: '서쪽 계단을 이용해 2층과 3층 사이를 이동하세요.', bidirectional: true },
   { id: 'stairs-1-2', from: 'stairs-1', to: 'stairs-2', distance: 7, accessible: false, type: 'stairs', instruction: '중앙 계단을 이용해 1층과 2층 사이를 이동하세요.', bidirectional: true },
   { id: 'stairs-2-3', from: 'stairs-2', to: 'stairs-3', distance: 7, accessible: false, type: 'stairs', instruction: '중앙 계단을 이용해 2층과 3층 사이를 이동하세요.', bidirectional: true },
+  { id: 'stairs-east-1-2', from: 'stairs-east-1', to: 'stairs-east-2', distance: 7, accessible: false, type: 'stairs', instruction: '동쪽 계단을 이용해 1층과 2층 사이를 이동하세요.', bidirectional: true },
+  { id: 'stairs-east-2-3', from: 'stairs-east-2', to: 'stairs-east-3', distance: 7, accessible: false, type: 'stairs', instruction: '동쪽 계단을 이용해 2층과 3층 사이를 이동하세요.', bidirectional: true },
 ];

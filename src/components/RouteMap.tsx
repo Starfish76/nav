@@ -97,41 +97,40 @@ const floorThreeBoxes: Record<string, { x: number; y: number; width: number; hei
   'career-guidance-3': { x: 26, y: 312.221, width: 64, height: 37.779, doorPath: '' },
   'korean-room-3': { x: 26, y: 350, width: 64, height: 37.667, doorPath: '' },
   'social-room-3': { x: 26, y: 387.667, width: 64, height: 37.667, doorPath: '' },
-  'storage-west-3': { x: 90, y: 265.555, width: 50, height: 25, doorPath: '' },
-  'stairs-west-3': { x: 90, y: 290.555, width: 50, height: 36.111, doorPath: '' },
-  'lobby-west-3': { x: 90, y: 326.666, width: 50, height: 49.334, doorPath: '' },
-  'document-room-3': { x: 90, y: 376, width: 50, height: 49.334, doorPath: '' },
+  'stairs-west-3': { x: 90, y: 265.29199, width: 50, height: 61.37402, doorPath: '' },
+  'lobby-west-3': { x: 90, y: 326.66601, width: 50, height: 75.33399, doorPath: '' },
+  'document-room-3': { x: 90, y: 402, width: 50, height: 23.33399, doorPath: '' },
   'male-wc-west-3': { x: 140, y: 265.555, width: 63.333, height: 61.111, doorPath: '' },
-  'west-lobby-3': { x: 140, y: 326.666, width: 63.333, height: 38.334, doorPath: '' },
-  'class-3-1': { x: 140, y: 365, width: 105, height: 32.223, doorPath: '' },
-  'class-3-2': { x: 245, y: 365, width: 105, height: 32.223, doorPath: '' },
-  'class-3-3': { x: 350, y: 365, width: 105, height: 32.223, doorPath: '' },
-  'grade3-office-3': { x: 385, y: 294.444, width: 70, height: 32.223, doorPath: '' },
-  'storage-center-3': { x: 455, y: 294.444, width: 55, height: 32.223, doorPath: '' },
+  'west-lobby-3': { x: 141.40422, y: 326.666, width: 71.57903, height: 75.334, doorPath: '' },
+  'class-3-1': { x: 213.68432, y: 365, width: 77.63155, height: 37, doorPath: '' },
+  'class-3-2': { x: 291.31584, y: 365, width: 78.68417, height: 37, doorPath: '' },
+  'class-3-3': { x: 368.94739, y: 365, width: 86.05261, height: 37, doorPath: '' },
+  'grade3-office-3': { x: 385, y: 294.444, width: 124.73647, height: 32.223, doorPath: '' },
   'stairs-3': { x: 511.11, y: 294.444, width: 54.667, height: 32.223, doorPath: '' },
   'study-lounge-3': { x: 455, y: 365, width: 110.555, height: 37, doorPath: '' },
   'career-class-3': { x: 455, y: 402, width: 110.555, height: 37.779, doorPath: '' },
-  'class-3-4': { x: 565.555, y: 365, width: 91, height: 36.667, doorPath: '' },
-  'elevator-3': { x: 647.999, y: 303.332, width: 30, height: 23.334, doorPath: '' },
-  'class-3-5': { x: 656.555, y: 365, width: 70.445, height: 36.667, doorPath: '' },
-  'moving-class-3': { x: 727, y: 365, width: 149.666, height: 36.667, doorPath: '' },
-  'storage-east-3': { x: 783.333, y: 303.332, width: 34.444, height: 23.334, doorPath: '' },
+  'class-3-4': { x: 565.555, y: 365, width: 87.84211, height: 36.667, doorPath: '' },
+  'elevator-3': { x: 639.57794, y: 303.332, width: 30, height: 23.334, doorPath: '' },
+  'class-3-5': { x: 653.3971, y: 365, width: 76.7608, height: 36.667, doorPath: '' },
+  'moving-class-3': { x: 729.10528, y: 365, width: 72.82381, height: 36.667, doorPath: '' },
   'female-wc-east-3': { x: 817.777, y: 265.555, width: 58.333, height: 61.111, doorPath: '' },
   'stairs-east-3': { x: 876.666, y: 265.555, width: 51.667, height: 61.111, doorPath: '' },
-  'east-lobby-3': { x: 876.666, y: 326.666, width: 51.667, height: 35, doorPath: '' },
-  'east-hall-3': { x: 876.666, y: 361.666, width: 51.667, height: 35.334, doorPath: '' },
-  'support-d-3': { x: 876.666, y: 397, width: 51.667, height: 36.112, doorPath: '' },
+  'east-lobby-3': { x: 803.51028, y: 326.666, width: 71.57903, height: 75.334, doorPath: '' },
+  'east-hall-3': { x: 876.666, y: 326.66601, width: 51.667, height: 75.33399, doorPath: '' },
+  'support-d-3': { x: 876.666, y: 402, width: 51.667, height: 31.112, doorPath: '' },
   'math-room-3': { x: 928.333, y: 309.999, width: 61.223, height: 61.557, doorPath: '' },
   'english-room-3': { x: 928.333, y: 371.556, width: 61.223, height: 61.556, doorPath: '' },
 };
 
 const floorOneOutline = 'M26 312.221H90V265.555H203.333V326.667H385V294.444H647.999V303.333H677.999V326.667H727.777V303.333H783.333V265.555H927.77V309.999H989.556V433.112H928.333V433.112H876.666V401.667H565.555V439.779H455V397.223H140V425.334H26Z';
 
+const floorTwoOutline = 'M26 312.221H90V265.555H203.333V326.666H385V294.444H647.999V303.332H677.999V326.666H785.777V265.555H927.77V309.999H989.556V433.112H876.666V401.667H565.555V439.779H455V397.223H140V425.334H26Z';
+
+const floorThreeOutline = 'M26 312.221H90V265.292H140V265.555H203.333V326.666H385V294.444H565.777V326.666H639.578V303.332H669.578V326.666H817.777V265.555H928.333V309.999H989.556V433.112H876.666V402H565.555V439.779H455V402H140V425.334H26Z';
+
 const floorOneCorridor = { x: 140, y: 326.666, width: 737.222, height: 38.334, centerY: 346.182 };
 
 const floorOneCorridorExtensions = 'M90 326.666H140V336.666H90Z M783.333 268.055H817.777V326.666H783.333Z';
-
-const floorTwoOutline = floorOneOutline;
 
 const floorTwoCorridor = floorOneCorridor;
 
@@ -255,7 +254,10 @@ export function RouteMap({ nodes, edges, route, selectedFloor, onFloorChange }: 
           <desc id="map-svg-desc">실제 본관의 긴 중앙 복도와 복도 양쪽 공간을 단순화하고 장소 노드와 이동 경로를 표시한 지도입니다.</desc>
           <g className="building-layout" transform={layoutTransform} aria-hidden="true">
             {selectedFloor >= 2
-              ? <image href={selectedFloor === 2 ? '/svg%20(1).svg' : '/school-map-floor-3.svg'} x="0" y="0" width="1000" height="700" preserveAspectRatio="none" />
+              ? <>
+                <image href={selectedFloor === 2 ? '/svg%20(1).svg' : '/svg%20(2).svg'} x="0" y="0" width="1000" height="700" preserveAspectRatio="none" />
+                <path className="building-outline building-outline-overlay" d={selectedFloor === 2 ? floorTwoOutline : floorThreeOutline} />
+              </>
               : <>
                 {detailedOutline
                   ? <path className="building-outline" d={detailedOutline} />
