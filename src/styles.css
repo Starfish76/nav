@@ -4,8 +4,6 @@ body { margin: 0; min-width: 320px; min-height: 100vh; }
 button, select { font: inherit; }
 button, select, input { outline-offset: 3px; }
 :focus-visible { outline: 3px solid #f6a623; }
-.skip-link { position: fixed; top: -80px; left: 1rem; z-index: 100; padding: .8rem 1rem; background: white; color: var(--navy); border-radius: 8px; }
-.skip-link:focus { top: 1rem; }
 .site-header { min-height: 164px; padding: 34px max(5vw, calc((100% - 1440px) / 2)); color: white; background: linear-gradient(110deg, #123a5e 0%, #185b77 55%, #168577 100%); display: flex; align-items: center; gap: 22px; box-shadow: inset 0 -1px rgba(255,255,255,.25); }
 .header-mark { width: 68px; height: 68px; border: 1px solid rgba(255,255,255,.55); background: rgba(255,255,255,.12); border-radius: 20px; display: grid; place-items: center; font-size: 36px; }
 .site-header h1 { font-size: clamp(1.65rem, 3vw, 2.4rem); line-height: 1.15; margin: 2px 0 8px; letter-spacing: -.04em; }
