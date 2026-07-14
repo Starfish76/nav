@@ -5,10 +5,45 @@ import type { NavigationEdge, NavigationNode } from '../types/navigation';
 import { calculateEdgeCost, findShortestPath } from './dijkstra';
 
 describe('findShortestPath', () => {
-  it('같은 층의 최단 경로를 계산한다', () => {
-    const route = findShortestPath(navigationNodes, navigationEdges, 'health-1', 'administration-1', 'wheelchair');
-    expect(route?.nodeIds).toContain('hall-1-5');
-    expect(route?.nodeIds.at(-1)).toBe('administration-1');
+  it('보건실에서 서쪽 홀을 거쳐 엘리베이터로 이동한다', () => {
+    const route = findShortestPath(navigationNodes, navigationEdges, 'health-1', 'elevator-1', 'wheelchair');
+    expect(route?.nodeIds.slice(0, 3)).toEqual(['health-1', 'lobby-1', 'hall-1-1']);
+    expect(route?.nodeIds).not.toContain('wee-class-1');
+    expect(route?.nodeIds.at(-1)).toBe('elevator-1');
+  });
+
+  it('도서관에서 동쪽 홀을 거쳐 되돌아가지 않고 엘리베이터로 이동한다', () => {
+    const route = findShortestPath(navigationNodes, navigationEdges, 'library-1', 'elevator-1', 'wheelchair');
+    const elevator = navigationNodes.find((node) => node.id === 'elevator-1');
+    const elevatorAccess = navigationEdges.find((edge) => edge.id === 'access-elevator-1');
+    const elevatorHall = navigationNodes.find((node) => node.id === elevatorAccess?.from);
+    const routeX = route?.nodeIds.map((id) => navigationNodes.find((node) => node.id === id)?.x ?? Number.POSITIVE_INFINITY) ?? [];
+    expect(route?.nodeIds.slice(0, 2)).toEqual(['library-1', 'east-lobby-1']);
+    expect(route?.nodeIds.at(-2)).toBe(elevatorHall?.id);
+    expect(elevatorHall?.x).toBe(elevator?.x);
+    expect(route?.nodeIds).not.toContain('main-entrance-1');
+    routeX.slice(1).forEach((x, index) => expect(x).toBeLessThanOrEqual(routeX[index]));
+  });
+
+  it('동쪽에서 1-4로 갈 때 교실 앞을 지나쳤다가 되돌아오지 않는다', () => {
+    const route = findShortestPath(navigationNodes, navigationEdges, 'library-1', 'class-1-4', 'wheelchair');
+    const routeNodes = route?.nodeIds.map((id) => navigationNodes.find((node) => node.id === id)).filter((node): node is NavigationNode => Boolean(node)) ?? [];
+    routeNodes.slice(1).forEach((node, index) => expect(node.x).toBeLessThanOrEqual(routeNodes[index].x));
+    expect(routeNodes.at(-2)?.x).toBe(routeNodes.at(-1)?.x);
+  });
+
+  it('2층 양쪽 끝 공간은 각각 인접한 홀을 거쳐 복도로 나온다', () => {
+    const westRoute = findShortestPath(navigationNodes, navigationEdges, 'art-room-2', 'elevator-2', 'wheelchair');
+    const eastRoute = findShortestPath(navigationNodes, navigationEdges, 'staff-lounge-2', 'elevator-2', 'wheelchair');
+    const ibRoute = findShortestPath(navigationNodes, navigationEdges, 'ib-seminar-2', 'elevator-2', 'wheelchair');
+    expect(westRoute?.nodeIds.slice(0, 3)).toEqual(['art-room-2', 'art-room-access-hall-2', 'lobby-west-2']);
+    const artRoom = navigationNodes.find((node) => node.id === 'art-room-2');
+    const artRoomHall = navigationNodes.find((node) => node.id === 'art-room-access-hall-2');
+    const westLobby = navigationNodes.find((node) => node.id === 'lobby-west-2');
+    expect(artRoomHall?.y).toBe(artRoom?.y);
+    expect(artRoomHall?.x).toBe(westLobby?.x);
+    expect(eastRoute?.nodeIds.slice(0, 2)).toEqual(['staff-lounge-2', 'lobby-east-2']);
+    expect(ibRoute?.nodeIds.slice(0, 2)).toEqual(['ib-seminar-2', 'lobby-east-2']);
   });
 
   it('층간 이동에 엘리베이터를 이용한다', () => {

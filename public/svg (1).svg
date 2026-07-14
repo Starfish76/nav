@@ -11,11 +11,11 @@
    <rect id="svg_4" stroke-width="2" stroke="#435e66" fill="#e4ead2" height="52.779" width="64" y="312.221" x="26" class="facility"/>
   </g>
   <g data-node-id="art-room-2" id="art-room-2">
-   <rect id="svg_5" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="68.334" width="64" y="365" x="26" class="room"/>
+   <rect id="svg_5" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="60.334" width="64" y="365" x="26" class="room"/>
   </g>
   <g data-node-id="lobby-west-2" id="lobby-west-2">
-   <path id="svg_6" fill="#eef2ee" d="m90,336.666l65,0l0,24.167l-15,0l0,72.501l-50,0l0,-96.668z" class="open-space"/>
-   <path id="svg_7" stroke-width="2" stroke="#435e66" fill="none" d="m90,336.666l0,96.668l50,0l0,-72.501" class="open-wall"/>
+   <path id="svg_6" fill="#eef2ee" d="m90,326.666l50,0l0,10l15,0l0,24.167l-15,0l0,64.501l-50,0l0,-98.668z" class="open-space"/>
+   <path id="svg_7" stroke-width="2" stroke="#435e66" fill="none" d="m90,326.666l0,98.668l50,0l0,-64.501" class="open-wall"/>
   </g>
   <g data-node-id="stairs-west-2" id="stairs-west-2">
    <rect id="svg_8" stroke-width="2" stroke="#a85f4b" fill="#f2e4dc" height="61.111" width="50" y="265.555" x="90" class="stairs"/>
@@ -54,7 +54,7 @@
    <rect id="svg_19" stroke-width="2" stroke="#317486" fill="#d8ebee" height="23.334" width="30" y="303.332" x="647.999" class="elevator"/>
   </g>
   <g stroke="null" data-node-id="study-lounge-2" id="study-lounge-2">
-   <rect stroke="#435e66" id="svg_21" stroke-width="2" fill="#e4ead2" height="82.779" width="110.555" y="365" x="455.00001" class="facility"/>
+   <rect stroke="#435e66" id="svg_21" stroke-width="2" fill="#e4ead2" height="74.779" width="110.555" y="365" x="455.00001" class="facility"/>
   </g>
   <g data-node-id="grade2-office-2" id="grade2-office-2">
    <rect id="svg_22" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="36.667" width="90" y="365" x="565.555" class="room"/>
@@ -75,21 +75,21 @@
    <rect id="svg_27" stroke-width="2" stroke="#a85f4b" fill="#f2e4dc" height="61.111" width="51.111" y="265.555" x="876.659" class="stairs"/>
   </g>
   <g data-node-id="lobby-east-2" id="lobby-east-2">
-   <path id="svg_28" fill="#eef2ee" d="m876.666,326.333l51.667,0l0,38.667l-51.667,0l0,-38.667z" class="open-space"/>
-   <path id="svg_29" stroke-width="2" stroke="#435e66" fill="none" d="m928.333,326.333l0,38.667" class="open-wall"/>
+   <path id="svg_28" fill="#eef2ee" d="m876.666,326.333l51.667,0l0,63.667l-51.667,0l0,-63.667z" class="open-space"/>
+   <path id="svg_29" stroke-width="2" stroke="#435e66" fill="none" d="m928.333,326.333l0,63.667" class="open-wall"/>
   </g>
   <g stroke="null" data-node-id="staff-lounge-2" id="staff-lounge-2">
-   <rect stroke="#435e66" id="svg_30" stroke-width="2" fill="#e4ead2" height="51.11202" width="51.667" y="389.99998" x="876.666" class="facility"/>
+   <rect stroke="#435e66" id="svg_30" stroke-width="2" fill="#e4ead2" height="43.11202" width="51.667" y="389.99998" x="876.666" class="facility"/>
   </g>
   <g stroke="null" data-node-id="history-2" id="history-2">
    <rect stroke="#435e66" id="svg_31" stroke-width="2" fill="#e4ead2" height="34.001" width="61.223" y="309.999" x="928.333" class="facility"/>
   </g>
   <g stroke="null" data-node-id="ib-seminar-2" id="ib-seminar-2">
-   <rect stroke="#435e66" id="svg_32" stroke-width="2" fill="#f1efc9" height="97.112" width="61.223" y="344" x="928.333" class="room"/>
+   <rect stroke="#435e66" id="svg_32" stroke-width="2" fill="#f1efc9" height="89.112" width="61.223" y="344" x="928.333" class="room"/>
   </g>
   <g data-node-id="principal-2" id="principal-2">
-   <rect id="svg_20" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="50.556" width="45" y="397.223" x="455" class="room"/>
+   <rect id="svg_20" stroke-width="2" stroke="#435e66" fill="#f1efc9" height="42.556" width="45" y="397.223" x="455" class="room"/>
   </g>
-  <rect stroke="#435e66" stroke-width="2" id="svg_34" height="24.99998" width="49.15521" y="408.52614" x="90.3195" fill="#f1efc9"/>
+  <rect stroke="#435e66" stroke-width="2" id="svg_34" height="16.80786" width="49.15521" y="408.52614" x="90.3195" fill="#f1efc9"/>
  </g>
 </svg>
