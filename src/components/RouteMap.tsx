@@ -243,11 +243,11 @@ export function RouteMap({ nodes, edges, route, selectedFloor, onFloorChange }: 
   return (
     <section className="card map-card" aria-labelledby="map-title">
       <div className="map-topbar">
-        <div><p className="eyebrow">SIMPLIFIED FLOOR PLAN</p><h2 id="map-title">학교 안내 지도</h2></div>
+        <div><p className="eyebrow">간략화된 층별 안내도</p><h2 id="map-title">학교 안내 지도</h2></div>
         <FloorSelector selectedFloor={selectedFloor} routeFloors={routeFloors} onChange={onFloorChange} />
       </div>
       <div className="map-frame" aria-label={`${selectedFloor}층 학교 안내 지도`}>
-        <div className="floor-label" aria-hidden="true"><strong>{selectedFloor}</strong><span>FLOOR</span></div>
+        <div className="floor-label" aria-hidden="true"><strong>{selectedFloor}</strong><span>층</span></div>
         <span className="map-source-note">본관 배치 기반 간략도</span>
         <svg className="floorplan-mode" viewBox={`0 0 ${viewBoxWidth} 700`} role="img" aria-labelledby="map-svg-title map-svg-desc">
           <title id="map-svg-title">본관 {selectedFloor}층 경로 지도</title>

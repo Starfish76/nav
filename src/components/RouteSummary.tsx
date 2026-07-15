@@ -10,7 +10,7 @@ export function RouteSummary({ steps, totalCost, mode }: Props) {
   const score = calculateAccessibilityScore(steps);
   return (
     <section className="card summary-card" aria-labelledby="summary-title" aria-live="polite">
-      <div className="summary-title"><div><p className="eyebrow">RECOMMENDED ROUTE</p><h2 id="summary-title">추천 경로</h2></div><span className="mode-chip">{mode === 'wheelchair' ? '♿ 휠체어 이동' : '● 일반 이동'}</span></div>
+      <div className="summary-title"><div><p className="eyebrow">맞춤형 경로 안내</p><h2 id="summary-title">추천 경로</h2></div><span className="mode-chip">{mode === 'wheelchair' ? '♿ 휠체어 이동' : '● 일반 이동'}</span></div>
       <p className="route-names"><strong>{steps[0].from.name}</strong><span aria-hidden="true">→</span><strong>{steps.at(-1)?.to.name}</strong></p>
       <div className="score-row"><div className="score-ring" style={{ '--score': `${score * 3.6}deg` } as React.CSSProperties}><span><strong>{score}</strong>점</span></div><div><strong>접근성 점수</strong><p>{score >= 85 ? '편안한 이동이 가능한 경로예요.' : score >= 60 ? '일부 주의 구간이 있어요.' : '이동 전 경로를 확인하세요.'}</p></div></div>
       <dl className="summary-grid">

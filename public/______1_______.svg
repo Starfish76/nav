@@ -1,18 +1,18 @@
 <svg width="999.9999999999999" height="700" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title description" role="img">
  <title id="title">학교 본관 1층 안내 지도</title>
 
- <desc id="description">본관 1층의 교실, 행정 공간, 화장실, 계단, 엘리베이터, 홀과 도서관을 단순화한 SVG 안내도입니다.</desc>
+ <desc id="description">본관 1층의 교실, 행정 공간, 화장실, 계단, 엘리베이터, 홀과 도서관을 단순화한 벡터 안내도입니다.</desc>
  <g>
-  <title>Layer 1</title>
+  <title>학교 본관 1층 안내도</title>
   <path stroke="#a85f4b" id="svg_123" d="m876.65883,265.5552l51.1111,0l0,61.1113l-51.1111,0l0,-61.1113z" opacity="undefined" stroke-width="2" fill="#f2e4dc"/>
   <g stroke="null" id="main-corridor">
    <rect stroke="#435e66" id="svg_3" stroke-width="2" fill="#eef2ee" height="38.3335" width="737.22219" y="326.6665" x="140" class="corridor"/>
    <path stroke="#a8b7b7" id="svg_4" stroke-dasharray="8 10" stroke-width="2" fill="none" d="m140,346.18174l737.22219,0" class="corridor-line"/>
    <text stroke="null" transform="matrix(1.00302 0 0 0.696973 -0.423274 110.605)" id="svg_5" text-anchor="middle" font-weight="700" font-size="12px" font-family=""Malgun Gothic", "Noto Sans KR", sans-serif" fill="#718486" y="332" x="507" class="corridor-label">1층 본관 중앙 복도</text>
   </g>
-  <g stroke="null" aria-label="Wee Class" data-node-id="wee-class-1" id="wee-class-1">
+  <g stroke="null" aria-label="위 클래스" data-node-id="wee-class-1" id="wee-class-1">
    <rect stroke="#435e66" id="svg_6" stroke-width="2" fill="#e4ead2" height="67.7786" width="64" y="312.2214" x="26" class="facility"/>
-   <text stroke="null" transform="matrix(1 0 0 0.451857 0 208.294)" id="svg_7" dominant-baseline="middle" text-anchor="middle" font-weight="700" font-size="11px" font-family=""Malgun Gothic", "Noto Sans KR", sans-serif" fill="#173b4d" y="305" x="58" class="label small">Wee Class</text>
+   <text stroke="null" transform="matrix(1 0 0 0.451857 0 208.294)" id="svg_7" dominant-baseline="middle" text-anchor="middle" font-weight="700" font-size="11px" font-family=""Malgun Gothic", "Noto Sans KR", sans-serif" fill="#173b4d" y="305" x="58" class="label small">위 클래스</text>
   </g>
   <g stroke="null" aria-label="보건실" data-node-id="health-1" id="health-1">
    <rect stroke="#435e66" id="svg_8" stroke-width="2" fill="#e4ead2" height="53.3343" width="64" y="380" x="26" class="facility"/>
@@ -75,19 +75,19 @@
    <rect stroke="#2e7c70" id="svg_45" stroke-width="2" fill="#dff0e9" height="32.2227" width="42" y="294.4438" x="566.8881" class="restroom"/>
    <text transform="matrix(1 0 0 0.402784 0 195.091)" stroke="null" id="svg_46" dominant-baseline="middle" text-anchor="middle" font-weight="700" font-size="11px" font-family=""Malgun Gothic", "Noto Sans KR", sans-serif" fill="#173b4d" y="286.6665" x="587.8881" class="label small">
     <tspan stroke="null" id="svg_47" dy="-7" x="587.8881">여자</tspan>
-    <tspan stroke="null" id="svg_48" dy="14" x="587.8881">장애인 WC</tspan>
+    <tspan stroke="null" id="svg_48" dy="14" x="587.8881">장애인 화장실</tspan>
    </text>
   </g>
   <g stroke="null" data-node-id="accessible-wc-1" id="accessible-wc-1">
    <rect stroke="#2e7c70" id="svg_49" stroke-width="2" fill="#dff0e9" height="32.2227" width="38" y="294.4438" x="608.8881" class="restroom"/>
    <text transform="matrix(1 0 0 0.402784 0 195.091)" stroke="null" id="svg_50" dominant-baseline="middle" text-anchor="middle" font-weight="700" font-size="11px" font-family=""Malgun Gothic", "Noto Sans KR", sans-serif" fill="#173b4d" y="286.6665" x="627.8881" class="label small">
     <tspan stroke="null" id="svg_51" dy="-7" x="627.8881">남자</tspan>
-    <tspan stroke="null" id="svg_52" dy="14" x="627.8881">장애인 WC</tspan>
+    <tspan stroke="null" id="svg_52" dy="14" x="627.8881">장애인 화장실</tspan>
    </text>
   </g>
   <g stroke="null" data-node-id="elevator-1" id="elevator-1">
    <rect stroke="#317486" id="svg_53" stroke-width="2" fill="#d8ebee" height="23.3339" width="30" y="303.33261" x="647.9992" class="elevator"/>
-   <text stroke="null" transform="matrix(1 0 0 0.291674 0 231.386)" id="svg_54" dominant-baseline="middle" text-anchor="middle" font-weight="700" font-size="11px" font-family=""Malgun Gothic", "Noto Sans KR", sans-serif" fill="#173b4d" y="286.6665" x="662.9992" class="label small">E</text>
+   <text stroke="null" transform="matrix(1 0 0 0.291674 0 231.386)" id="svg_54" dominant-baseline="middle" text-anchor="middle" font-weight="700" font-size="11px" font-family=""Malgun Gothic", "Noto Sans KR", sans-serif" fill="#173b4d" y="286.6665" x="662.9992" class="label small">승강기</text>
   </g>
   <g stroke="null" aria-label="본관 현관" data-node-id="main-entrance-1" id="main-entrance-1">
    <path stroke="null" id="svg_55" fill="#eef2ee" d="m455,356.6666l110.555,0l0,91.112l-110.555,0l0,-91.112z" class="open-space"/>

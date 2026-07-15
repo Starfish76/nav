@@ -53,7 +53,7 @@ export default function App() {
             {routeResult
               ? <RouteSummary steps={steps} totalCost={routeResult.totalCost} mode={travelMode} />
               : <section className="card summary-card summary-placeholder" aria-live="polite">
-                  <div><p className="eyebrow">RECOMMENDED ROUTE</p><h2>추천 경로</h2></div>
+                  <div><p className="eyebrow">맞춤형 경로 안내</p><h2>추천 경로</h2></div>
                   <div className="summary-placeholder-content"><span aria-hidden="true">↗</span><strong>이동 경로를 찾아보세요</strong><p>출발지와 목적지를 선택하고 경로 찾기 버튼을 누르면 이동 요약이 표시됩니다.</p></div>
                 </section>}
           </div>
@@ -61,6 +61,6 @@ export default function App() {
         <RouteMap nodes={navigationNodes} edges={navigationEdges} route={routeResult} selectedFloor={selectedFloor} onFloorChange={setSelectedFloor} />
       </div>
       {routeResult && <InstructionList steps={steps} currentStep={currentStep} speechStatus={speechStatus} onStepSelect={selectStep} onPrevious={() => changeStep(currentStep - 1)} onNext={() => changeStep(currentStep + 1)} onRestart={() => changeStep(0)} onSpeakAll={() => speak(steps.map((step, index) => `${index + 1}단계. ${step.edge.instruction}`).join(' '))} onSpeakCurrent={() => speak(`${currentStep + 1}단계. ${steps[currentStep]?.edge.instruction ?? ''}`)} onStopSpeech={() => { stopSpeech(); setSpeechStatus('음성 안내를 중지했습니다.'); }} />}
-    </main><footer>Accessible School Navigator <span>·</span> 학교 배리어프리 이동 지원 프로젝트</footer></>
+    </main><footer>교내 배리어프리 길찾기 <span>·</span> 학교 이동 지원 프로젝트</footer></>
   );
 }

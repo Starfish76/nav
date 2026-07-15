@@ -20,9 +20,9 @@ const hallwayNodes = (floor: number): NavigationNode[] => [
 /** 안내 이미지의 본관 구역을 복도 기준 좌우 순서와 위·아래 위치에 맞춰 배치했습니다. */
 export const navigationNodes: NavigationNode[] = [
   ...hallwayNodes(1),
-  { id: 'wee-class-1', name: 'Wee Class', floor: 1, x: 58, y: 346.111, type: 'facility' },
+  { id: 'wee-class-1', name: '위 클래스', floor: 1, x: 58, y: 346.111, type: 'facility' },
   { id: 'health-1', name: '보건실', floor: 1, x: 58, y: 402.667, type: 'facility' },
-  { id: 'lobby-1', name: '서쪽 홀', floor: 1, x: 115, y: 381, type: 'facility', description: 'Wee Class와 보건실 오른쪽의 열린 홀입니다.' },
+  { id: 'lobby-1', name: '서쪽 홀', floor: 1, x: 115, y: 381, type: 'facility', description: '위 클래스와 보건실 오른쪽의 열린 홀입니다.' },
   { id: 'stairs-west-1', name: '1층 서쪽 계단', floor: 1, x: 115, y: 296.111, type: 'stairs' },
   { id: 'male-wc-1', name: '1층 서쪽 남자화장실', floor: 1, x: 172.222, y: 296.111, type: 'restroom' },
   { id: 'class-1-1', name: '1-1', floor: 1, x: 180, y: 381.111, type: 'room' },
@@ -75,7 +75,7 @@ export const navigationNodes: NavigationNode[] = [
   { id: 'lobby-east-2', name: '동쪽 로비', floor: 2, x: 902.5, y: 377.5, type: 'facility' },
   { id: 'staff-lounge-2', name: '교직원 휴게실', floor: 2, x: 902.5, y: 411.556, type: 'facility' },
   { id: 'history-2', name: '역사관', floor: 2, x: 958.944, y: 327, type: 'facility' },
-  { id: 'ib-seminar-2', name: 'IB세미나실', floor: 2, x: 958.944, y: 388.556, type: 'room' },
+  { id: 'ib-seminar-2', name: '국제 바칼로레아 세미나실', floor: 2, x: 958.944, y: 388.556, type: 'room' },
 
   ...hallwayNodes(3),
   { id: 'west-hall-3-north', name: '3층 서쪽 홀 북측 통로', floor: 3, x: 115, y: 331.111, type: 'hallway' },

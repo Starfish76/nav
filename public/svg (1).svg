@@ -1,7 +1,7 @@
 <svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
 
  <g>
-  <title>Layer 1</title>
+  <title>학교 본관 2층 안내도</title>
   <rect id="svg_1" fill="#f7faf9" height="700" width="1000" class="background"/>
   <g id="main-corridor">
    <rect id="svg_2" stroke-width="2" stroke="#435e66" fill="#eef2ee" height="38.334" width="737.222" y="326.666" x="140" class="corridor"/>

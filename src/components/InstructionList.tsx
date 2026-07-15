@@ -18,7 +18,7 @@ export function InstructionList(props: Props) {
   if (!props.steps.length) return null;
   return (
     <section className="card instructions-card" aria-labelledby="instructions-title">
-      <div className="instructions-header"><div><p className="eyebrow">STEP-BY-STEP GUIDE</p><h2 id="instructions-title">단계별 이동 안내</h2></div><span className="progress-text">{props.currentStep + 1} / {props.steps.length} 단계</span></div>
+      <div className="instructions-header"><div><p className="eyebrow">순서별 길 안내</p><h2 id="instructions-title">단계별 이동 안내</h2></div><span className="progress-text">{props.currentStep + 1} / {props.steps.length} 단계</span></div>
       <div className="speech-actions" aria-label="음성 안내 제어"><button type="button" onClick={props.onSpeakAll}>🔊 전체 경로 음성 안내</button><button type="button" onClick={props.onSpeakCurrent}>▶ 현재 단계 듣기</button><button type="button" onClick={props.onStopSpeech}>■ 음성 중지</button></div>
       <p className="sr-status" aria-live="polite">{props.speechStatus}</p>
       <ol className="instruction-list">

@@ -118,7 +118,7 @@ const lobbyRoomEdges: NavigationEdge[] = [
     accessible: true,
     type: 'door',
     width: 1.1,
-    instruction: 'Wee Class에서 서쪽 홀로 나오세요.',
+    instruction: '위 클래스에서 서쪽 홀로 나오세요.',
     bidirectional: true,
   },
   {
@@ -195,7 +195,7 @@ const lobbyRoomEdges: NavigationEdge[] = [
     accessible: true,
     type: 'door',
     width: 1.1,
-    instruction: 'IB세미나실에서 동쪽 로비로 나오세요.',
+    instruction: '국제 바칼로레아 세미나실에서 동쪽 로비로 나오세요.',
     bidirectional: true,
   },
 ];

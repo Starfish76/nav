@@ -1,7 +1,7 @@
 <svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
 
  <g>
-  <title>Layer 1</title>
+  <title>학교 본관 3층 안내도</title>
   <path id="svg_1" d="m0,0l1000,0l0,700l-1000,0l0,-700z" opacity="undefined" fill="#f7faf9"/>
   <rect stroke="#435e66" id="svg_3" stroke-width="2" fill="#eef2ee" height="38.334" width="588.80083" y="326.666" x="213.68427" class="corridor"/>
   <path stroke="#a8b7b7" id="svg_4" stroke-dasharray="8 10" stroke-width="2" fill="none" d="m220.0001,346.182l576.16914,0" class="corridor-line"/>
