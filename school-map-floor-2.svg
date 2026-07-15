@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+  <style>
+    .background { fill: #f7faf9; }
+    .outline { fill: #faf8ec; stroke: #294957; stroke-width: 5; stroke-linejoin: round; }
+    .corridor { fill: #eef2ee; stroke: #435e66; stroke-width: 2; }
+    .corridor-line { fill: none; stroke: #a8b7b7; stroke-width: 2; stroke-dasharray: 8 10; }
+    .room { fill: #f1efc9; stroke: #435e66; stroke-width: 2; }
+    .facility { fill: #e4ead2; stroke: #435e66; stroke-width: 2; }
+    .restroom { fill: #dff0e9; stroke: #2e7c70; stroke-width: 2; }
+    .stairs { fill: #f2e4dc; stroke: #a85f4b; stroke-width: 2; }
+    .elevator { fill: #d8ebee; stroke: #317486; stroke-width: 2; }
+    .open-space { fill: #eef2ee; stroke: none; }
+    .open-wall { fill: none; stroke: #435e66; stroke-width: 2; }
+  </style>
+
+  <rect class="background" width="1000" height="700" />
+  <path id="building-outline" class="outline" d="M26 312.221H90V265.555H203.333V326.667H385V294.444H647.999V303.333H677.999V326.667H727.777V303.333H783.333V265.555H927.77V309.999H989.556V441.112H928.333V441.112H876.666V401.667H565.555V447.779H455V397.223H140V433.334H26Z" />
+
+  <g id="main-corridor">
+    <rect class="corridor" x="140" y="326.666" width="737.222" height="38.334" />
+    <path class="corridor-line" d="M140 346.182H877.222" />
+  </g>
+
+  <g id="art-prep-2" data-node-id="art-prep-2">
+    <rect class="facility" x="26" y="312.221" width="64" height="52.779" />
+  </g>
+  <g id="art-room-2" data-node-id="art-room-2">
+    <rect class="room" x="26" y="365" width="64" height="68.334" />
+  </g>
+  <g id="lobby-west-2" data-node-id="lobby-west-2">
+    <path class="open-space" d="M90 336.666H155V360.833H140V433.334H90Z" />
+    <path class="open-wall" d="M90 336.666V433.334H140V360.833" />
+  </g>
+  <g id="stairs-west-2" data-node-id="stairs-west-2">
+    <rect class="stairs" x="90" y="265.555" width="50" height="61.111" />
+  </g>
+  <g id="female-wc-west-2" data-node-id="female-wc-west-2">
+    <rect class="restroom" x="140" y="265.555" width="63.333" height="61.111" />
+  </g>
+
+  <g id="class-2-1" data-node-id="class-2-1">
+    <rect class="room" x="140" y="365" width="80" height="32.223" />
+  </g>
+  <g id="class-2-2" data-node-id="class-2-2">
+    <rect class="room" x="220" y="365" width="75" height="32.223" />
+  </g>
+  <g id="class-2-3" data-node-id="class-2-3">
+    <rect class="room" x="295" y="365" width="75" height="32.223" />
+  </g>
+  <g id="broadcast-2" data-node-id="broadcast-2">
+    <rect class="facility" x="370" y="365" width="85" height="32.223" />
+  </g>
+
+  <g id="support-b-2" data-node-id="support-b-2">
+    <rect class="room" x="385" y="294.444" width="70" height="32.222" />
+  </g>
+  <g id="telecom-2" data-node-id="telecom-2">
+    <rect class="facility" x="455" y="294.444" width="55" height="32.222" />
+  </g>
+  <g id="stairs-2" data-node-id="stairs-2">
+    <rect class="stairs" x="511.11" y="294.444" width="54.667" height="32.222" />
+  </g>
+  <g id="male-wc-2" data-node-id="male-wc-2">
+    <rect class="restroom" x="566.888" y="294.444" width="42" height="32.222" />
+  </g>
+  <g id="accessible-wc-2" data-node-id="accessible-wc-2">
+    <rect class="restroom" x="608.888" y="294.444" width="38" height="32.222" />
+  </g>
+  <g id="elevator-2" data-node-id="elevator-2">
+    <rect class="elevator" x="647.999" y="303.332" width="30" height="23.334" />
+  </g>
+
+  <g id="principal-2" data-node-id="principal-2">
+    <rect class="room" x="455" y="397.223" width="45" height="50.556" />
+  </g>
+  <g id="study-lounge-2" data-node-id="study-lounge-2">
+    <rect class="facility" x="500" y="365" width="65.555" height="82.779" />
+  </g>
+  <g id="grade2-office-2" data-node-id="grade2-office-2">
+    <rect class="room" x="565.555" y="365" width="90" height="36.667" />
+  </g>
+  <g id="class-2-4" data-node-id="class-2-4">
+    <rect class="room" x="655.555" y="365" width="70" height="36.667" />
+  </g>
+  <g id="class-2-5" data-node-id="class-2-5">
+    <rect class="room" x="725.555" y="365" width="75" height="36.667" />
+  </g>
+  <g id="moving-class-2" data-node-id="moving-class-2">
+    <rect class="room" x="800.555" y="365" width="75" height="36.667" />
+  </g>
+
+  <g id="male-wc-east-2" data-node-id="male-wc-east-2">
+    <rect class="restroom" x="817.777" y="265.555" width="58.333" height="61.111" />
+  </g>
+  <g id="stairs-east-2" data-node-id="stairs-east-2">
+    <rect class="stairs" x="876.659" y="265.555" width="51.111" height="61.111" />
+  </g>
+  <g id="lobby-east-2" data-node-id="lobby-east-2">
+    <path class="open-space" d="M876.666 326.333H928.333V365H876.666Z" />
+    <path class="open-wall" d="M928.333 326.333V365" />
+  </g>
+  <g id="staff-lounge-2" data-node-id="staff-lounge-2">
+    <rect class="facility" x="876.666" y="365" width="51.667" height="76.112" />
+  </g>
+  <g id="history-2" data-node-id="history-2">
+    <rect class="facility" x="928.333" y="309.999" width="61.223" height="55.001" />
+  </g>
+  <g id="ib-seminar-2" data-node-id="ib-seminar-2">
+    <rect class="room" x="928.333" y="365" width="61.223" height="76.112" />
+  </g>
+</svg>
